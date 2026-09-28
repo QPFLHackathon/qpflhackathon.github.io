@@ -20,15 +20,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Copy site into preview/
-        run: |
-          mkdir preview
-          cp -r index.html style.css assets preview/
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build static site
+        run: pnpm build
+        env:
+          BASE_PATH: /previews/pr-${{ github.event.number }}
 
       - name: Preview Pages
         uses: rajyan/preview-pages@v1
         with:
-          source-dir: preview
+          source-dir: out
           target-dir: previews # → https://qpflhackathon.github.io/previews/pr-<N>/
           pr-per-commit: false # one preview per PR, overwritten on each push
           pr-comment: sticky # one comment per PR, updated in place
