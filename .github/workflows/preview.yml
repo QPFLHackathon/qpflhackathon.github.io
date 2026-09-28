@@ -1,0 +1,51 @@
+name: PR preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: preview-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Copy site into preview/
+        run: |
+          mkdir preview
+          cp -r index.html style.css assets preview/
+
+      - name: Preview Pages
+        uses: rajyan/preview-pages@v1
+        with:
+          source-dir: preview
+          target-dir: previews # → https://qpflhackathon.github.io/previews/pr-<N>/
+          pr-per-commit: false # one preview per PR, overwritten on each push
+          pr-comment: sticky # one comment per PR, updated in place
+
+  cleanup:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Remove preview
+        run: |
+          rm -rf previews/pr-${{ github.event.number }}
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git diff --cached --quiet || { git commit -m "Remove preview for PR #${{ github.event.number }}"; git push; }
