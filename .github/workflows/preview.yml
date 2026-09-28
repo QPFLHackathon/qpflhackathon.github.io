@@ -58,6 +58,9 @@ jobs:
         with:
           source-dir: out
           target-dir: previews # → https://qpflhackathon.github.io/previews/pr-<N>/
+          # This is a user/org site served from the domain root; without this the
+          # action links to <owner>.github.io/<repo>/..., as for a project site.
+          configured-domain: qpflhackathon.github.io
           pr-per-commit: false # one preview per PR, overwritten on each push
           pr-comment: sticky # one comment per PR, updated in place
 
