@@ -2,7 +2,7 @@ export const pastEdition = {
   posterPostUrl:
     "https://www.linkedin.com/posts/epfl-quantum-hackathon_hi-everyone-we-are-back-i-hope-you-activity-7415387589521764352-yxvY/",
   newsUrl:
-    "https://actu.epfl.ch/news/students-launch-successful-quantum-hackathon-at-ep/?utm_source=chatgpt.com",
+    "https://actu.epfl.ch/news/students-launch-successful-quantum-hackathon-at-ep/",
   stats: [
     { value: "3", label: "days of immersion" },
     { value: "3", label: "challenges" },
