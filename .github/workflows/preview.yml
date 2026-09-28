@@ -37,6 +37,22 @@ jobs:
         env:
           BASE_PATH: /previews/pr-${{ github.event.number }}
 
+      # GitHub Pages runs Jekyll unless .nojekyll is at the branch root, and
+      # Jekyll drops folders starting with "_", which removes Next.js' _next/.
+      - name: Ensure .nojekyll at gh-pages root
+        run: |
+          git fetch origin gh-pages
+          git worktree add --detach ../gh-pages FETCH_HEAD
+          cd ../gh-pages
+          if [ ! -f .nojekyll ]; then
+            touch .nojekyll
+            git config user.name github-actions[bot]
+            git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+            git add .nojekyll
+            git commit -m "Add .nojekyll so GitHub Pages serves _next/"
+            git push origin HEAD:gh-pages
+          fi
+
       - name: Preview Pages
         uses: rajyan/preview-pages@v1
         with:
