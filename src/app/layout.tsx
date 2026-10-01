@@ -19,6 +19,17 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600"],
 });
 
+const shareDescription =
+  "Three days of quantum computing challenges, talks and hacking at EPFL in Lausanne, Switzerland, March 12–14, 2027.";
+
+const ogImage = {
+  url: publicPath("/og-image.png"),
+  width: 1200,
+  height: 630,
+  type: "image/png",
+  alt: "EPFL Quantum Hackathon (QPFL) logo",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "EPFL Quantum Hackathon 2027 | Lausanne, Switzerland",
@@ -52,10 +63,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
+    siteName: "EPFL Quantum Hackathon",
+    locale: "en_US",
     title: "EPFL Quantum Hackathon 2027",
-    description:
-      "Join the premier quantum computing hackathon at EPFL. Build innovative projects and collaborate with quantum experts.",
-    images: ["/assets/images/og-preview.png"],
+    description: shareDescription,
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EPFL Quantum Hackathon 2027",
+    description: shareDescription,
+    images: [ogImage],
   },
   verification: { google: "2pYWuJ-tNP5xi4Yy2YxbjZFLzrxeaA31fk44xfrjtmo" },
 };
