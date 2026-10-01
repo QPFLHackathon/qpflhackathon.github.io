@@ -29,7 +29,7 @@ export const links = {
   linkedin: "https://www.linkedin.com/company/epfl-quantum-hackathon",
 };
 
-export const contactEmail = "epflquantumhackathon@gmail.com";
+export const contactEmail = "quantum-hackathon@epfl.ch";
 
 export const credits = {
   website: { name: "Hugo Izadi", href: "https://www.linkedin.com/in/hugoizadi/" },
