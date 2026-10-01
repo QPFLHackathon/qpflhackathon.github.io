@@ -15,7 +15,6 @@ export const event = {
 export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#committee", label: "Committee" },
-  { href: "#challenges", label: "Challenges" },
   { href: "#practical", label: "Practical Info" },
   { href: "#2026", label: "Past Edition" },
   { href: "#contact", label: "Contact" },

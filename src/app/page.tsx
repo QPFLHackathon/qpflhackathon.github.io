@@ -1,5 +1,4 @@
 import { About } from "@/components/sections/About";
-import { Challenges } from "@/components/sections/Challenges";
 import { Committee } from "@/components/sections/Committee";
 import { Hero } from "@/components/sections/Hero";
 import { PastEdition } from "@/components/sections/PastEdition";
@@ -47,7 +46,6 @@ export default function Home() {
       <Hero />
       <About />
       <Committee />
-      <Challenges />
       <PracticalInfo />
       <PastEdition />
     </>

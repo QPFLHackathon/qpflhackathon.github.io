@@ -11,7 +11,11 @@ export function PracticalInfo() {
     <Section id="practical" tone="muted">
       <SectionHeading>Practical information</SectionHeading>
 
-      <SubHeading>Schedule</SubHeading>
+      <SubHeading>Tentative schedule</SubHeading>
+      <p className="text-[0.95rem] text-subtle">
+        This schedule is tentative and may change. We will share the final schedule closer to the
+        event.
+      </p>
       <CardGrid>
         {schedule.map((day) => (
           <ScheduleDayCard key={day.title} day={day} />
