@@ -15,7 +15,7 @@ TypeScript is pinned to 6.x and ESLint to 9.x: typescript-eslint doesn't support
 
 ## Where things live
 
-- `src/content/` – site text and data (committee, sponsors, schedule, past edition). Most updates only touch these files.
+- `src/content/` – site text and data (committee, schedule, past edition). Most updates only touch these files.
 - `src/components/sections/` – one component per page section.
 - `src/components/` and `src/components/ui/` – reusable building blocks (cards, buttons, sections, links).
 - `src/app/globals.css` – Tailwind theme: brand colours (`rouge`, `leman`, `canard`, `taupe`, …) and fonts.

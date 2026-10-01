@@ -10,7 +10,6 @@ export const event = {
 export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#committee", label: "Committee" },
-  { href: "#sponsors", label: "Sponsors" },
   { href: "#challenges", label: "Challenges" },
   { href: "#practical", label: "Practical Info" },
   { href: "#2026", label: "Past Edition" },
