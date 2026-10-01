@@ -1,5 +1,6 @@
 import type { StaticImageData } from "next/image";
 
+import alessandroPhoto from "@assets/images/Alessandro_photo.jpeg";
 import eleonoraPhoto from "@assets/images/Eleonora_photo.jpeg";
 import eustachePhoto from "@assets/images/Eustache_photo.jpeg";
 import kenPhoto from "@assets/images/Ken_photo.jpeg";
@@ -55,11 +56,11 @@ export const committee: CommitteeMember[] = [
     image: eleonoraPhoto,
   },
   {
-    // TODO: add Alessandro-PP.jpg to assets/images and import it here
     name: "Alessandro Garino",
     role: "MSc student in Quantum Science and Engineering",
     href: "https://www.linkedin.com/in/alessandro-garino-78a345297/",
     linkLabel: "Alessandro Garino LinkedIn profile",
+    image: alessandroPhoto,
   },
   {
     name: "Ken Zou",
