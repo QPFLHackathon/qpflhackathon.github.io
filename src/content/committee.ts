@@ -1,7 +1,7 @@
 import type { StaticImageData } from "next/image";
 
 import eleonoraPhoto from "@assets/images/Eleonora_photo.jpeg";
-import eustachyPhoto from "@assets/images/Eustachy_photo.jpeg";
+import eustachePhoto from "@assets/images/Eustache_photo.jpeg";
 import kenPhoto from "@assets/images/Ken_photo.jpeg";
 import qseLogo from "@assets/images/Logo_QSE.png";
 import lucaPhoto from "@assets/images/Luca_photo.png";
@@ -34,11 +34,11 @@ export const committee: CommitteeMember[] = [
     image: lucaPhoto,
   },
   {
-    name: "Eustachy Lamort de Gail",
+    name: "Eustache Lamort de Gail",
     role: "MSc student in Physics",
     href: "https://www.linkedin.com/in/eustachy-lamort-de-gail-a10803265/",
-    linkLabel: "Eustachy Lamort de Gail LinkedIn profile",
-    image: eustachyPhoto,
+    linkLabel: "Eustache Lamort de Gail LinkedIn profile",
+    image: eustachePhoto,
   },
   {
     // TODO: add Francesca_photo.jpg to assets/images and import it here
