@@ -26,3 +26,8 @@ export const links = {
 };
 
 export const contactEmail = "epflquantumhackathon@gmail.com";
+
+export const credits = {
+  website: { name: "Hugo Izadi", href: "https://www.linkedin.com/in/hugoizadi/" },
+  logo: { name: "Nicolò Battocletti", href: "https://www.linkedin.com/in/nicolobattocletti/" },
+};

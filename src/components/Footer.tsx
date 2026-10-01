@@ -1,4 +1,4 @@
-import { contactEmail, links } from "@/content/site";
+import { contactEmail, credits, links } from "@/content/site";
 
 import { ExternalLink } from "./ui/ExternalLink";
 
@@ -18,8 +18,16 @@ export function Footer() {
             LinkedIn
           </ExternalLink>
         </p>
-        <p className="mt-4 text-[0.7rem] text-subtle italic">
-          Website created by Hugo Izadi · Logo created by Nicolò Battocletti
+        <p className="mt-4 text-[0.7rem] text-subtle">
+          Website created by{" "}
+          <ExternalLink href={credits.website.href} className="text-link">
+            {credits.website.name}
+          </ExternalLink>{" "}
+          · Logo created by{" "}
+          <ExternalLink href={credits.logo.href} className="text-link">
+            {credits.logo.name}
+          </ExternalLink>
+          .
         </p>
       </div>
     </footer>
