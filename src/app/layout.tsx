@@ -1,11 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Lora, Space_Grotesk } from "next/font/google";
-
-import favicon from "@assets/images/red_transparent.png";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { siteUrl } from "@/content/site";
+import { publicPath, siteUrl } from "@/content/site";
 
 import "./globals.css";
 
@@ -41,7 +39,15 @@ export const metadata: Metadata = {
     "Networking",
     "Prizes",
   ],
-  icons: { icon: { url: favicon.src, type: "image/png", sizes: "32x32" } },
+  icons: {
+    icon: [
+      { url: publicPath("/favicon.ico"), sizes: "32x32" },
+      { url: publicPath("/favicon-32x32.png"), type: "image/png", sizes: "32x32" },
+      { url: publicPath("/favicon-16x16.png"), type: "image/png", sizes: "16x16" },
+    ],
+    apple: { url: publicPath("/apple-touch-icon.png"), sizes: "180x180" },
+  },
+  manifest: publicPath("/site.webmanifest"),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -52,6 +58,10 @@ export const metadata: Metadata = {
     images: ["/assets/images/og-preview.png"],
   },
   verification: { google: "2pYWuJ-tNP5xi4Yy2YxbjZFLzrxeaA31fk44xfrjtmo" },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

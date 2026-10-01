@@ -1,5 +1,8 @@
 export const siteUrl = "https://qpflhackathon.github.io";
 
+/** Prefixes a public/ file path with the base path, which Next doesn't add to metadata URLs. */
+export const publicPath = (path: string) => `${process.env.BASE_PATH ?? ""}${path}`;
+
 export const event = {
   name: "EPFL Quantum Hackathon",
   shortName: "Quantum Hackathon 2027",
