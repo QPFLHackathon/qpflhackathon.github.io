@@ -13,7 +13,7 @@ export function Hero() {
       <div className="mx-auto max-w-[900px] text-center lg:max-w-[1000px]">
         <Image
           src={heroLogo}
-          alt={event.name}
+          alt="QPFL logo"
           priority
           className="mx-auto mb-12 h-auto w-[min(70vw,700px)]"
         />

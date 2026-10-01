@@ -33,7 +33,8 @@ const ogImage = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "EPFL Quantum Hackathon 2027 | Lausanne, Switzerland",
-  description: "Join the EPFL Quantum Hackathon in Lausanne, Switzerland on March 12-14, 2027.",
+  description:
+    "Join the EPFL Quantum Hackathon, a three-day quantum computing hackathon at EPFL in Lausanne, Switzerland, on March 12–14, 2027. No prior quantum experience required.",
   keywords: [
     "EPFL",
     "Quantum Hackathon",

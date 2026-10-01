@@ -8,6 +8,8 @@ export const event = {
   shortName: "Quantum Hackathon 2027",
   edition: "2nd Edition",
   dates: "March 12 - 14, 2027",
+  startDate: "2027-03-12",
+  endDate: "2027-03-14",
 };
 
 export const navLinks = [
