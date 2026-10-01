@@ -23,8 +23,7 @@ export const navLinks = [
 export const links = {
   rules:
     "https://drive.google.com/file/d/1_Djqqxee0Qn7CyQc63CXTcZZHMFusObD/view?usp=share_link",
-  venueMap:
-    "https://plan.epfl.ch/?dim_floor=0&lang=en&dim_lang=en&tree_groups=centres_nevralgiques_grp%2Cmobilite_acces_grp%2Crestauration_et_commerces_grp%2Censeignement%2Cservices_campus_grp%2Cequipements_grp&tree_group_layers_centres_nevralgiques_grp=&tree_group_layers_mobilite_acces_grp=metro&tree_group_layers_restauration_et_commerces_grp=&tree_group_layers_enseignement=guichet_etudiants&tree_group_layers_services_campus_grp=information_epfl&tree_group_layers_equipements_grp=&baselayer_ref=grp_backgrounds&map_x=2532727&map_y=1152291&map_zoom=11",
+  campusMap: "https://plan.epfl.ch/?lang=en",
   linkedin: "https://www.linkedin.com/company/epfl-quantum-hackathon",
 };
 

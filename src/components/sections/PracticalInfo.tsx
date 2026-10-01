@@ -30,8 +30,8 @@ export function PracticalInfo() {
           <BulletList
             items={[
               <>
-                The hackathon will take place at EPFL,{" "}
-                <ExternalLink href={links.venueMap}>BC building</ExternalLink>.
+                The hackathon will take place on the{" "}
+                <ExternalLink href={links.campusMap}>EPFL main campus</ExternalLink> in Lausanne.
               </>,
               "EPFL is accessible via the Lausanne Metro M1. The hackathon venue is a short walk from the EPFL station. The SwissTech Convention Center hotel is also within walking distance.",
             ]}
@@ -41,12 +41,6 @@ export function PracticalInfo() {
           <BulletList
             items={[
               <>
-                For participants who study{" "}
-                <strong className="underline">outside of Switzerland</strong>, we reimburse
-                second-class or economy-class travel tickets to Lausanne. First-class tickets are
-                not eligible for reimbursement.
-              </>,
-              <>
                 <strong className="underline">Meals and refreshments</strong> will be provided
                 throughout the three days of the event.
               </>,
@@ -54,6 +48,7 @@ export function PracticalInfo() {
                 Participants may coordinate shared accommodation and find potential hosts in the
                 WhatsApp group <i>(Coming Soon)</i>.
               </>,
+              "We will share more information about the logistics closer to the event.",
             ]}
           />
         </Card>
